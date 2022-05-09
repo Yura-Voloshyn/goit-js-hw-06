@@ -22,3 +22,7 @@ button {
   padding: 8px 12px;
   cursor: pointer;
 }
+
+.item-tt {
+display: flex;
+margin-left: 10px;}
