@@ -17,7 +17,7 @@ const images = [
 const galleryList = document.querySelector('.gallery');
 console.log(galleryList);
 
-const items = galleryList.insertAdjacentHTML('afterbegin', images.map(({ url, alt }) => `<li class="item-tt"><img src=${url} alt = ${alt} width = 100% /></li>`).join(''));
+galleryList.insertAdjacentHTML('afterbegin', images.map(({ url, alt }) => `<li class="item-tt"><img src=${url} alt = ${alt} width = 100% /></li>`).join(''));
 
 
 galleryList.style.display = 'flex';

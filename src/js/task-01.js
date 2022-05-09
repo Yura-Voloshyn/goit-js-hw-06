@@ -29,8 +29,8 @@ console.log(`Category: ${lastItemTitle.textContent}`);
 const lastItemCount = lastItem.querySelectorAll('li');
 console.log(`Elements: ${lastItemCount.length}`);
 
-
 // function
+console.log('---function result---');
 const categoryItem = [...allCategories].map(category => `Category: ${category.children[0].textContent}
 Elements: ${category.children[1].children.length}`).join('\r\n');
 console.log(categoryItem);
