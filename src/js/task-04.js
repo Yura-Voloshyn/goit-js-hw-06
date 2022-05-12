@@ -27,4 +27,38 @@
 //     // console.log(counterValue);
 //     valueEl.textContent = counterValue.value;
 // });
+const counterValue = {
+    value: 0,
+    icrement() {
+        this.value += 1;
+    },
+    decrement() {
+        this.value -= 1;
+    },
+}
 
+const refs = {
+    incrementBtn: document.querySelector('[data-action="increment"]'),
+    decrementBtn: document.querySelector('[data-action="decrement"]'),
+    showValue: document.querySelector('#value'),
+};
+
+
+console.log(refs.incrementBtn);
+console.log(refs.decrementBtn);
+console.log(refs.showValue);
+
+refs.incrementBtn.addEventListener('click', onIcrementBtnClick);
+refs.decrementBtn.addEventListener('click', onDecrementBtnClick);
+
+function onIcrementBtnClick() {
+    console.log('click+1');
+    counterValue.icrement();
+    refs.showValue.textContent = counterValue.value;
+}
+
+function onDecrementBtnClick() {
+    console.log('click-1');
+    counterValue.decrement();
+    refs.showValue.textContent = counterValue.value;
+}
