@@ -6,5 +6,5 @@ const refs = {
 refs.sizeControl.addEventListener('input', onSizeControlChange);
 
 function onSizeControlChange() {
-  refs.textSize.style.fontSize = refs.sizeControl.value + 'px';
+  refs.textSize.style.fontSize = `${refs.sizeControl.value}px`;
 }
